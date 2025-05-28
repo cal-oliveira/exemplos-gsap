@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  height: 500vh;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.product-display {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.product-image.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  z-index: 10;
+}
+
+.text-slide {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.text-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-slide h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-slide p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.price-tag {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  opacity: 0.7;
+}
+
+.scroll-indicator p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, #fff, transparent);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0071e3, #a2d2ff);
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    width: 80%;
+    left: 10%;
+    top: 10%;
+  }
+
+  .text-slide h2 {
+    font-size: 2.5rem;
+  }
+
+  .text-slide p {
+    font-size: 1.2rem;
+  }
+}
