@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+.painel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 3rem;
+}
+
+.painel1 {
+  background: #1e1e2f;
+}
+.painel2 {
+  background: #29294d;
+}
+.painel3 {
+  background: #3b3b5c;
+}
+
+.titulo {
+  opacity: 0;
+  transform: translateY(50px);
+}
