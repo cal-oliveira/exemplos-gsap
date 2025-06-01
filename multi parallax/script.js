@@ -20,3 +20,24 @@ document.querySelectorAll(".painel").forEach((painel, index) => {
       duration: 1,
     });
 });
+
+// Repetir a animação para cada paragrafo
+document.querySelectorAll(".painel").forEach((text, index) => {
+  const paragrafo = text.querySelector(".paragrafo");
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: text,
+        start: "top top",
+        end: "+=100%",
+        scrub: true,
+        pin: true, // fixa a seção
+      },
+    })
+    .to(paragrafo, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    });
+});

@@ -1,0 +1,25 @@
+body {
+  background: #000;
+  color: #ddd;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1 {
+  background: #312c85;
+}
+
+.section-2 {
+  background: orange;
+}
+
+.section-3 {
+  background: cyan;
+}
